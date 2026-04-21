@@ -113,3 +113,34 @@
       style="border:none;overflow:hidden"
       scrolling="no"
       frameborder="0"
+      allowfullscreen
+      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+    </iframe>
+  </div>
+</section>
+
+<!-- =========================
+     SECTION 6: ABOUT
+========================= -->
+<section id="about" class="section section-blue">
+  <h2>About Moreton City Pickleball</h2>
+
+  <p class="about-text">
+    <strong>Our Mission.</strong>
+    At Moreton City Pickleball, we’re more than just a club—we’re a vibrant community
+    driven by friendship and a shared love for the game...
+  </p>
+</section>
+
+<!-- =========================
+     Logo shrink on scroll
+========================= -->
+<script>
+  const header = document.querySelector('.header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 50);
+  });
+</script>
+
+</body>
+</html>
