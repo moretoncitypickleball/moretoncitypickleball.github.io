@@ -118,12 +118,23 @@ body { margin: 0; font-family: 'League Spartan', sans-serif; }
   margin: auto;
   text-align: center;
 }
+
+.registration-intro {
+  font-size: 1.15rem;
+  margin-bottom: 1.75rem;
+}
+
 .registration-links {
-  margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 0.75rem;
+  align-items: center;     /* ✅ critical */
+  gap: 0.9rem;
+}
+
+.registration-links .btn {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
 }
 
 /* MOBILE */
