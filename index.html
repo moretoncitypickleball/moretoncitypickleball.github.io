@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Moreton City Pickleball</title>
 
-  <!-- League Spartan (site-wide font) -->
-  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- League Spartan -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700&display=swap">
 
   <!-- Site styles -->
   <link rel="stylesheet" href="/assets/css/styles.css">
@@ -14,15 +14,11 @@
 
 <body>
 
-<!-- =========================
-     SECTION 1: HEADER / MENU
-========================= -->
 <header class="header">
   <div class="header-inner">
     <div class="logo-wrap">
-      <img src="/assets/img/MCP_logo.JPG" alt="Moreton City Pickleball logo" />
+      <img src="/assets/img/MCP_logo.JPG" alt="Moreton City Pickleball logo">
     </div>
-
     <nav class="nav">
       <a href="#home">Home</a>
       <a href="#sessions">Sessions</a>
@@ -33,108 +29,78 @@
   </div>
 </header>
 
-<!-- =========================
-     SECTION 2: HERO
-========================= -->
 <section id="home" class="section hero">
   <div class="hero-overlay"></div>
-
   <div class="hero-content">
     <p class="hero-byline">
       We are about community, fun and growing the sport of Pickleball.
     </p>
     <h1>Welcome to Our Pickleball Community</h1>
-
-    <a class="btn primary"
-       href="https://opensports.net/moreton-city-pickleball"
-       target="_blank" rel="noopener">
+    <a class="btn primary" href="https://opensports.net/moreton-city-pickleball" target="_blank">
       Join a session
     </a>
   </div>
 </section>
 
-<!-- =========================
-     SECTION 3: SESSIONS
-========================= -->
 <section id="sessions" class="section section-white">
   <h2>Join us at an upcoming session with OpenSports</h2>
 
   <div class="sessions-container">
-
-    <div class="os-buttons">
-      <a href="https://apps.apple.com/us/app/opensports-meetup-for-sports/id1056940981" target="_blank">
-        Download on iOS
-      </a>
-
-      <a href="https://play.google.com/store/search?q=opensports&c=apps" target="_blank">
-        Download on Android
-      </a>
-    </div>
-
+    <script src="https://embed.opensports.net/dist/iframe.min.js"></script>
     <a class="os-iframe-link"
        href="https://embed.opensports.net/iframe/events?aliasID=moreton-city-pickleball">
     </a>
-    <script src="https://embed.opensports.net/dist/iframe.min.js"></script>
-
   </div>
 </section>
 
-<!-- =========================
-     SECTION 4: IMAGE GALLERY
-========================= -->
 <section id="gallery" class="section section-blue">
   <h2>Capture the spirit of pickleball with us!</h2>
 
   <div class="gallery-container">
     <div class="gallery">
-      <img src="/assets/img/img.webp" alt="">
-      <img src="/assets/img/img2.webp" alt="">
-      <img src="/assets/img/img3.webp" alt="">
-      <img src="/assets/img/img4.webp" alt="">
-      <img src="/assets/img/img5.webp" alt="">
-      <img src="/assets/img/img6.webp" alt="">
-      <img src="/assets/img/img7.webp" alt="">
-      <img src="/assets/img/img8.webp" alt="">
+      <img src="/assets/img/img.webp">
+      <img src="/assets/img/img2.webp">
+      <img src="/assets/img/img3.webp">
+      <img src="/assets/img/img4.webp">
+      <img src="/assets/img/img5.webp">
+      <img src="/assets/img/img6.webp">
+      <img src="/assets/img/img7.webp">
+      <img src="/assets/img/img8.webp">
     </div>
   </div>
 </section>
 
-<!-- =========================
-     SECTION 5: FACEBOOK
-========================= -->
 <section id="facebook" class="section section-white">
   <h2>Let’s be Friends</h2>
-
   <div class="facebook-wrap">
     <iframe
-      src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fmoretoncitypickleball&tabs=timeline&width=500&height=500&adapt_container_width=true"
+      src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/moretoncitypickleball&tabs=timeline"
       width="500"
       height="500"
       style="border:none;overflow:hidden"
       scrolling="no"
       frameborder="0"
-      allowfullscreen
-      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+      allowfullscreen="true">
     </iframe>
   </div>
 </section>
 
-<!-- =========================
-     SECTION 6: ABOUT
-========================= -->
 <section id="about" class="section section-blue">
   <h2>About Moreton City Pickleball</h2>
-
   <p class="about-text">
     <strong>Our Mission.</strong>
-    At Moreton City Pickleball, we’re more than just a club—we’re a vibrant community
-    driven by friendship and a shared love for the game...
+    At Moreton City Pickleball, we’re more than just a club—we’re a vibrant
+    community driven by friendship and a shared love for the game. Whether
+    you're a seasoned player or holding a paddle for the first time, you'll
+    find a place on our court and encouragement from the sidelines.
+    Our mission is simple: to grow the sport of pickleball in a fun and
+    supportive environment. Perfect for all ages, Pickleball is one of the
+    fastest-growing sports in the world—a dynamic blend of tennis,
+    badminton, and ping pong played on a smaller court. It's easy to learn,
+    endlessly social, and addictive in all the right ways.
   </p>
 </section>
 
-<!-- =========================
-     Logo shrink on scroll
-========================= -->
 <script>
   const header = document.querySelector('.header');
   window.addEventListener('scroll', () => {
