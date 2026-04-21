@@ -101,6 +101,69 @@
   </p>
 </section>
 
+<section id="contact" class="section section-white">
+  <h2>Contact Us</h2>
+
+  <div class="contact-grid">
+
+    <!-- LEFT: Contact Form -->
+    <form class="contact-form"
+          action="https://formspree.io/f/xeqyqjgv"
+          method="POST">
+
+      <!-- Honeypot field (spam protection) -->
+      <input type="text" name="_gotcha" style="display:none">
+
+      <label>
+        Name
+        <input type="text" name="name" required>
+      </label>
+
+      <label>
+        Email
+        <input type="email" name="email" required>
+      </label>
+
+      <label>
+        Message
+        <textarea name="message" rows="5" required></textarea>
+      </label>
+
+      <button type="submit" class="btn primary">
+        Send Message
+      </button>
+    </form>
+
+    <!-- RIGHT: Info + Map -->
+    <div class="contact-info">
+      <p class="contact-highlight">
+        <strong>Better yet, come and join in!</strong>
+      </p>
+
+      <a href="https://opensports.net/moreton-city-pickleball"
+         target="_blank"
+         class="btn outline">
+        Join a session on OpenSports
+      </a>
+
+      <p class="address">
+        📍 474 Deception Bay Road<br>
+        Deception Bay, QLD 4508
+      </p>
+
+      <div class="map-wrap">
+        <iframe
+          src="https://www.google.com/maps?q=474%20Deception%20Bay%20Road,%20Deception%20Bay%20QLD%204508&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+
+  </div>
+</section>
+  
+
 <script>
   const header = document.querySelector('.header');
   window.addEventListener('scroll', () => {
