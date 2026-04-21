@@ -2,6 +2,7 @@
   --blue: #142A59;
 }
 
+/* GLOBAL */
 * {
   box-sizing: border-box;
 }
@@ -11,12 +12,12 @@ body {
   font-family: 'League Spartan', sans-serif;
 }
 
+/* HEADER */
 .header {
   background: white;
   position: sticky;
   top: 0;
   z-index: 1000;
-  transition: padding 0.3s ease;
 }
 
 .header-inner {
@@ -44,15 +45,16 @@ body {
   font-weight: 600;
 }
 
+/* SECTIONS */
 .section {
   padding: 2.4rem 1.2rem;
 }
 
 .section h2 {
+  text-align: center;
   font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 1.2rem;
-  text-align: center;
 }
 
 .section-white {
@@ -65,9 +67,10 @@ body {
   color: white;
 }
 
+/* HERO */
 .hero {
+  background: url("../img/pickleball_generic.jpg") center/cover no-repeat;
   position: relative;
-  background: url("/assets/img/pickleball_generic.jpg") center/cover no-repeat;
   color: white;
   padding: 5rem 1.2rem;
 }
@@ -94,17 +97,27 @@ body {
   font-weight: 700;
 }
 
-.btn.primary {
+/* BUTTONS */
+.btn {
   display: inline-block;
-  margin-top: 1.2rem;
-  background: white;
-  color: var(--blue);
   padding: 0.8rem 1.6rem;
+  border-radius: 6px;
   font-weight: 700;
   text-decoration: none;
-  border-radius: 6px;
 }
 
+.btn.primary {
+  background: white;
+  color: var(--blue);
+}
+
+.btn.outline {
+  background: transparent;
+  color: var(--blue);
+  border: 2px solid var(--blue);
+}
+
+/* SESSIONS */
 .sessions-container {
   max-width: 1100px;
   margin: auto;
@@ -112,6 +125,22 @@ body {
   overflow-y: auto;
 }
 
+.os-buttons {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.os-buttons a {
+  background: var(--blue);
+  color: white;
+  padding: 0.6rem 1.4rem;
+  border-radius: 6px;
+  margin: 0.25rem;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* GALLERY */
 .gallery-container {
   max-width: 1200px;
   margin: auto;
@@ -132,90 +161,20 @@ body {
   border-radius: 8px;
 }
 
+/* FACEBOOK */
 .facebook-wrap {
   display: flex;
   justify-content: center;
 }
 
+/* ABOUT */
 .about-text {
   max-width: 900px;
   margin: auto;
   font-size: 1.1rem;
 }
 
-/* =========================
-   CONTACT SECTION
-========================= */
+/* CONTACT */
 .contact-grid {
   max-width: 1100px;
   margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
-  align-items: start;
-}
-
-/* Contact form */
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-
-.contact-form label {
-  display: flex;
-  flex-direction: column;
-  font-weight: 600;
-  font-size: 0.95rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-  margin-top: 0.4rem;
-  padding: 0.6rem;
-  font-family: 'League Spartan', sans-serif;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-}
-
-.contact-form textarea {
-  resize: vertical;
-}
-
-/* Right column */
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-
-.contact-highlight {
-  font-size: 1.2rem;
-}
-
-.address {
-  font-size: 1rem;
-}
-
-/* Outline button */
-.btn.outline {
-  background: transparent;
-  color: var(--blue);
-  border: 2px solid var(--blue);
-}
-
-/* Map */
-.map-wrap iframe {
-  width: 100%;
-  height: 260px;
-  border: 0;
-  border-radius: 8px;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-}
