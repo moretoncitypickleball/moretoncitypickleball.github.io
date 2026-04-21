@@ -116,9 +116,16 @@
 
   <div class="contact-grid">
 
-    <!-- LEFT: Form + success message (replaces form) -->
+    <!-- LEFT: Form / Success -->
     <div class="contact-left">
-      <form id="contact-form" class="contact-form" action="https://formspree.io/f/meevrzgo" method="POST" novalidate>
+
+      <!-- CONTACT FORM -->
+      <form
+        id="contact-form"
+        class="contact-form"
+        action="https://formspree.io/f/meevrzgo"
+        method="POST"
+      >
         <!-- Honeypot -->
         <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
 
@@ -133,18 +140,28 @@
         <label for="message">Message</label>
         <textarea id="message" name="message" rows="5" required></textarea>
 
-        <button id="send-btn" type="submit" class="btn primary">Send Message</button>
+        <button id="send-btn" type="submit" class="btn primary">
+          Send Message
+        </button>
 
-        <p id="form-error" class="form-error" role="alert" hidden>
+        <p id="form-error" class="form-error" hidden>
           Sorry — something went wrong. Please try again.
         </p>
       </form>
 
-      <!-- Success replaces the form -->
-      <div id="form-success" class="form-success-block" role="status" aria-live="polite" hidden>
+      <!-- SUCCESS MESSAGE (replaces form) -->
+      <div
+        id="form-success"
+        class="form-success-block"
+        role="status"
+        aria-live="polite"
+        hidden
+      >
         <h3>Message Sent. Thank you.</h3>
         <p>We’ll get back to you as soon as we can.</p>
-        <button type="button" id="send-another" class="btn outline">Send another message</button>
+        <button type="button" id="send-another" class="btn outline">
+          Send another message
+        </button>
       </div>
     </div>
 
@@ -152,7 +169,7 @@
     <div class="contact-info">
       <p class="contact-highlight"><strong>Better yet, come and join in!</strong></p>
 
-      <a class="btn outline" href="https://opensports.net/moreton-city-pickleball" target="_blank" rel="noopener">
+      <a href="https://opensports.net/moreton-city-pickleball" target="_blank" class="btn outline">
         Join a session on OpenSports
       </a>
 
@@ -164,9 +181,9 @@
       <div class="map-wrap">
         <iframe
           src="https://www.google.com/maps?q=474%20Deception%20Bay%20Road,%20Deception%20Bay%20QLD%204508&output=embed"
-          loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-          allowfullscreen>
-        </iframe>
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
     </div>
 
