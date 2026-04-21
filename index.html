@@ -102,3 +102,152 @@
 
   <p class="about-text">
     <strong>Our Mission.</strong>
+    At Moreton City Pickleball, we’re more than just a club—we’re a vibrant community driven by friendship and a shared love for the game.
+    Whether you're a seasoned player or holding a paddle for the first time, you'll find a place on our court and encouragement from the sidelines.
+    Our mission is simple: to grow the sport of pickleball in a fun and supportive environment.
+    Perfect for all ages, Pickleball is one of the fastest-growing sports in the world—a dynamic blend of tennis, badminton, and ping pong played on a smaller court.
+    It's easy to learn, endlessly social, and addictive in all the right ways.
+  </p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section section-white">
+  <h2>Contact Us</h2>
+
+  <div class="contact-grid">
+
+    <!-- LEFT: Form + success message (replaces form) -->
+    <div class="contact-left">
+      <form id="contact-form" class="contact-form" action="https://formspree.io/f/meevrzgo" method="POST" novalidate>
+        <!-- Honeypot -->
+        <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <input type="hidden" name="_subject" value="New message from Moreton City Pickleball website">
+
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name" required>
+
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button id="send-btn" type="submit" class="btn primary">Send Message</button>
+
+        <p id="form-error" class="form-error" role="alert" hidden>
+          Sorry — something went wrong. Please try again.
+        </p>
+      </form>
+
+      <!-- Success replaces the form -->
+      <div id="form-success" class="form-success-block" role="status" aria-live="polite" hidden>
+        <h3>Message Sent. Thank you.</h3>
+        <p>We’ll get back to you as soon as we can.</p>
+        <button type="button" id="send-another" class="btn outline">Send another message</button>
+      </div>
+    </div>
+
+    <!-- RIGHT: Info + Map -->
+    <div class="contact-info">
+      <p class="contact-highlight"><strong>Better yet, come and join in!</strong></p>
+
+      <a class="btn outline" href="https://opensports.net/moreton-city-pickleball" target="_blank" rel="noopener">
+        Join a session on OpenSports
+      </a>
+
+      <p class="address">
+        📍 474 Deception Bay Road<br>
+        Deception Bay, QLD 4508
+      </p>
+
+      <div class="map-wrap">
+        <iframe
+          src="https://www.google.com/maps?q=474%20Deception%20Bay%20Road,%20Deception%20Bay%20QLD%204508&output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Header logo shrink on scroll -->
+<script>
+  const header = document.querySelector('.header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 50);
+  });
+</script>
+
+<!-- Formspree AJAX submit: hide form on success -->
+<script>
+  (function () {
+    const form = document.getElementById('contact-form');
+    const btn = document.getElementById('send-btn');
+    const successBlock = document.getElementById('form-success');
+    const errorEl = document.getElementById('form-error');
+    const sendAnother = document.getElementById('send-another');
+
+    if (!form) return;
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      errorEl.hidden = true;
+
+      if (!form.checkValidity()) {
+        errorEl.textContent = "Please complete all required fields.";
+        errorEl.hidden = false;
+        return;
+      }
+
+      const formData = new FormData(form);
+
+      // If honeypot filled, treat as success but don't send
+      if (formData.get('_gotcha')) {
+        form.reset();
+        form.hidden = true;
+        successBlock.hidden = false;
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = "Sending...";
+
+      try {
+        const res = await fetch(form.action, {
+          method: "POST",
+          body: formData,
+          headers: { "Accept": "application/json" }
+        });
+
+        if (res.ok) {
+          form.reset();
+          form.hidden = true;
+          successBlock.hidden = false;
+        } else {
+          errorEl.hidden = false;
+        }
+      } catch (err) {
+        errorEl.hidden = false;
+      } finally {
+        btn.disabled = false;
+        btn.textContent = "Send Message";
+      }
+    });
+
+    if (sendAnother) {
+      sendAnother.addEventListener('click', () => {
+        successBlock.hidden = true;
+        form.hidden = false;
+        errorEl.hidden = true;
+        document.getElementById('name')?.focus();
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>
+``
