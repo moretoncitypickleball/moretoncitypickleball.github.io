@@ -6,18 +6,19 @@
   <title>Moreton City Pickleball</title>
 
   <!-- League Spartan -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- Site styles -->
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header class="header">
   <div class="header-inner">
     <div class="logo-wrap">
-      <img src="/assets/img/MCP_logo.JPG" alt="Moreton City Pickleball logo">
+      <img src="assets/img/MCP_logo.JPG" alt="Moreton City Pickleball logo">
     </div>
     <nav class="nav">
       <a href="#home">Home</a>
@@ -25,10 +26,12 @@
       <a href="#gallery">Gallery</a>
       <a href="#facebook">Facebook</a>
       <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 
+<!-- HERO -->
 <section id="home" class="section hero">
   <div class="hero-overlay"></div>
   <div class="hero-content">
@@ -42,10 +45,20 @@
   </div>
 </section>
 
+<!-- SESSIONS -->
 <section id="sessions" class="section section-white">
   <h2>Join us at an upcoming session with OpenSports</h2>
 
   <div class="sessions-container">
+    <div class="os-buttons">
+      <a href="https://apps.apple.com/us/app/opensports-meetup-for-sports/id1056940981" target="_blank">
+        Download on iOS
+      </a>
+      <a href="https://play.google.com/store/search?q=opensports&c=apps" target="_blank">
+        Download on Android
+      </a>
+    </div>
+
     <script src="https://embed.opensports.net/dist/iframe.min.js"></script>
     <a class="os-iframe-link"
        href="https://embed.opensports.net/iframe/events?aliasID=moreton-city-pickleball">
@@ -53,65 +66,61 @@
   </div>
 </section>
 
+<!-- GALLERY -->
 <section id="gallery" class="section section-blue">
   <h2>Capture the spirit of pickleball with us!</h2>
 
   <div class="gallery-container">
     <div class="gallery">
-      <img src="/assets/img/img.webp">
-      <img src="/assets/img/img2.webp">
-      <img src="/assets/img/img3.webp">
-      <img src="/assets/img/img4.webp">
-      <img src="/assets/img/img5.webp">
-      <img src="/assets/img/img6.webp">
-      <img src="/assets/img/img7.webp">
-      <img src="/assets/img/img8.webp">
+      <img src="assets/img/img.webp">
+      <img src="assets/img/img2.webp">
+      <img src="assets/img/img3.webp">
+      <img src="assets/img/img4.webp">
+      <img src="assets/img/img5.webp">
+      <img src="assets/img/img6.webp">
+      <img src="assets/img/img7.webp">
+      <img src="assets/img/img8.webp">
     </div>
   </div>
 </section>
 
+<!-- FACEBOOK -->
 <section id="facebook" class="section section-white">
   <h2>Let’s be Friends</h2>
   <div class="facebook-wrap">
     <iframe
-      src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/moretoncitypickleball&tabs=timeline"
-      width="500"
-      height="500"
-      style="border:none;overflow:hidden"
-      scrolling="no"
-      frameborder="0"
-      allowfullscreen="true">
+      src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fmoretoncitypickleball&tabs=timeline&width=500&height=500&adapt_container_width=true"
+      width="500" height="500" style="border:none;overflow:hidden"
+      scrolling="no" frameborder="0" allowfullscreen>
     </iframe>
   </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about" class="section section-blue">
   <h2>About Moreton City Pickleball</h2>
   <p class="about-text">
     <strong>Our Mission.</strong>
-    At Moreton City Pickleball, we’re more than just a club—we’re a vibrant
-    community driven by friendship and a shared love for the game. Whether
-    you're a seasoned player or holding a paddle for the first time, you'll
-    find a place on our court and encouragement from the sidelines.
-    Our mission is simple: to grow the sport of pickleball in a fun and
-    supportive environment. Perfect for all ages, Pickleball is one of the
-    fastest-growing sports in the world—a dynamic blend of tennis,
-    badminton, and ping pong played on a smaller court. It's easy to learn,
+    At Moreton City Pickleball, we’re more than just a club—we’re a vibrant community
+    driven by friendship and a shared love for the game. Whether you're a seasoned
+    player or holding a paddle for the first time, you'll find a place on our court
+    and encouragement from the sidelines. Our mission is simple: to grow the sport
+    of pickleball in a fun and supportive environment. Perfect for all ages,
+    Pickleball is one of the fastest-growing sports in the world—a dynamic blend of
+    tennis, badminton, and ping pong played on a smaller court. It's easy to learn,
     endlessly social, and addictive in all the right ways.
   </p>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="section section-white">
   <h2>Contact Us</h2>
 
   <div class="contact-grid">
-
-    <!-- LEFT: Contact Form -->
     <form class="contact-form"
-          action="https://formspree.io/f/xeqyqjgv"
+          action="https://formspree.io/f/meevrzgo"
           method="POST">
 
-      <!-- Honeypot field (spam protection) -->
       <input type="text" name="_gotcha" style="display:none">
 
       <label>
@@ -129,20 +138,12 @@
         <textarea name="message" rows="5" required></textarea>
       </label>
 
-      <button type="submit" class="btn primary">
-        Send Message
-      </button>
+      <button type="submit" class="btn primary">Send Message</button>
     </form>
 
-    <!-- RIGHT: Info + Map -->
     <div class="contact-info">
-      <p class="contact-highlight">
-        <strong>Better yet, come and join in!</strong>
-      </p>
-
-      <a href="https://opensports.net/moreton-city-pickleball"
-         target="_blank"
-         class="btn outline">
+      <p class="contact-highlight"><strong>Better yet, come and join in!</strong></p>
+      <a class="btn outline" href="https://opensports.net/moreton-city-pickleball" target="_blank">
         Join a session on OpenSports
       </a>
 
@@ -154,15 +155,12 @@
       <div class="map-wrap">
         <iframe
           src="https://www.google.com/maps?q=474%20Deception%20Bay%20Road,%20Deception%20Bay%20QLD%204508&output=embed"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
+          loading="lazy">
         </iframe>
       </div>
     </div>
-
   </div>
 </section>
-  
 
 <script>
   const header = document.querySelector('.header');
