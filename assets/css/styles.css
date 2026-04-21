@@ -1,6 +1,5 @@
 :root { --blue: #142A59; }
 
-/* GLOBAL */
 * { box-sizing: border-box; }
 body { margin: 0; font-family: 'League Spartan', sans-serif; }
 
@@ -27,34 +26,31 @@ body { margin: 0; font-family: 'League Spartan', sans-serif; }
 
 .nav a {
   color: var(--blue);
-  text-decoration: none;
   margin-left: 1.2rem;
   font-weight: 600;
+  text-decoration: none;
 }
 .nav a:hover { text-decoration: underline; }
 
 /* SECTIONS */
-.section { padding: 2.4rem 1.2rem; }
+.section { padding: 2.5rem 1.25rem; }
 .section h2 {
   text-align: center;
-  font-size: 2.2rem;
+  font-size: 2.3rem;
   font-weight: 700;
-  margin-bottom: 1.2rem;
 }
 .section-white { background: white; color: var(--blue); }
-.section-blue  { background: var(--blue); color: white; }
+.section-blue { background: var(--blue); color: white; }
 
 /* HERO */
 .hero {
-  background: url("../img/pickleball_generic.jpg") center/cover no-repeat;
   position: relative;
+  background: url("../img/pickleball_generic.jpg") center/cover no-repeat;
   color: white;
-  padding: 5rem 1.2rem;
+  padding: 5rem 1.25rem;
 }
 .hero-overlay { position: absolute; inset: 0; background: rgba(20,42,89,0.5); }
-.hero-content { position: relative; max-width: 900px; margin: auto; text-align: left; }
-.hero-byline { font-size: 1.35rem; font-weight: 400; margin: 0 0 .75rem 0; }
-.hero h1 { font-size: 3.2rem; font-weight: 700; margin: 0 0 1.2rem 0; }
+.hero-content { position: relative; max-width: 900px; margin: auto; }
 
 /* BUTTONS */
 .btn {
@@ -67,34 +63,18 @@ body { margin: 0; font-family: 'League Spartan', sans-serif; }
   cursor: pointer;
 }
 .btn.primary { background: white; color: var(--blue); }
-.btn.outline { background: transparent; color: var(--blue); border: 2px solid var(--blue); }
+.btn.outline { background: transparent; color: var(--blue); border: 2px solid currentColor; }
 
-/* SESSIONS */
-.sessions-container {
-  max-width: 1100px;
+/* SESSIONS + GALLERY */
+.sessions-container,
+.gallery-container {
+  max-width: 1200px;
   margin: auto;
   max-height: 700px;
   overflow-y: auto;
 }
-.os-buttons { text-align: center; margin-bottom: 1rem; }
-.os-buttons a {
-  background: var(--blue);
-  color: white;
-  padding: 0.6rem 1.4rem;
-  border-radius: 6px;
-  margin: 0.25rem;
-  display: inline-block;
-  text-decoration: none;
-  font-weight: 600;
-}
 
 /* GALLERY */
-.gallery-container {
-  max-width: 1200px;
-  margin: auto;
-  max-height: 600px;
-  overflow-y: auto;
-}
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -107,17 +87,6 @@ body { margin: 0; font-family: 'League Spartan', sans-serif; }
   border-radius: 8px;
 }
 
-/* FACEBOOK */
-.facebook-wrap { display: flex; justify-content: center; }
-
-/* ABOUT */
-.about-text {
-  max-width: 900px;
-  margin: auto;
-  font-size: 1.1rem;
-  line-height: 1.7;
-}
-
 /* CONTACT */
 .contact-grid {
   max-width: 1100px;
@@ -125,67 +94,39 @@ body { margin: 0; font-family: 'League Spartan', sans-serif; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  align-items: start;
 }
 .contact-form label {
   display: block;
+  margin-bottom: 1rem;
   font-weight: 600;
-  margin-top: 0.9rem;
 }
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 0.65rem;
-  font-family: inherit;
-  font-size: 1rem;
-  margin-top: 0.35rem;
-  border: 1px solid #cfcfcf;
-  border-radius: 6px;
+  margin-top: 0.4rem;
+  padding: 0.6rem;
 }
-.contact-form textarea { resize: vertical; }
-.contact-form .btn.primary {
-  margin-top: 1.2rem;
-  background: var(--blue);
-  color: white;
-}
-.form-error {
-  margin-top: 1rem;
-  color: #b00020;
-  font-weight: 600;
-}
-.hp { display: none; }
-
 .form-success-block {
-  border: 2px solid rgba(20, 42, 89, 0.18);
-  border-radius: 12px;
+  border: 2px solid rgba(20,42,89,0.2);
   padding: 1.25rem;
-  background: rgba(20, 42, 89, 0.05);
-}
-.form-success-block h3 {
-  margin: 0 0 .5rem 0;
-  font-size: 1.6rem;
-  color: var(--blue);
-}
-.form-success-block p {
-  margin: 0 0 1rem 0;
-  color: #1f2f57;
+  border-radius: 10px;
 }
 
-.contact-highlight { font-size: 1.2rem; margin-top: 0; }
-.address { margin-top: 1rem; font-size: 1.05rem; }
-
-.map-wrap iframe {
-  width: 100%;
-  height: 260px;
-  border: 0;
-  border-radius: 8px;
-  margin-top: 1rem;
+/* REGISTRATION */
+.registration-content {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+.registration-links {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
   .contact-grid { grid-template-columns: 1fr; }
-  .hero h1 { font-size: 2.4rem; }
-  .logo-wrap img { height: 70px; }
-  .header.scrolled .logo-wrap img { height: 50px; }
 }
