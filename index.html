@@ -17,21 +17,34 @@
 <body>
 
 <!-- HEADER -->
-<header class="header">
+<header class="header" id="site-header">
   <div class="header-inner">
     <div class="logo-wrap">
       <img src="assets/img/MCP_logo.JPG" alt="Moreton City Pickleball logo">
     </div>
 
-    <nav class="nav">
-      <a href="#home">Home</a>
-      <a href="#sessions">Sessions</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#facebook">Facebook</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <a href="#registration">Register</a>
-      <a href="#sponsors">Sponsors</a>
+    <nav class="nav" aria-label="Primary navigation">
+      <!-- Hamburger (mobile) -->
+      <button class="nav-toggle" type="button"
+              aria-controls="primary-nav"
+              aria-expanded="false"
+              aria-label="Open menu">
+        <span class="nav-toggle-bars" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+      </button>
+
+      <!-- Links -->
+      <ul id="primary-nav" class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#sessions">Sessions</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#facebook">Facebook</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#registration">Register</a></li>
+        <li><a href="#sponsors">Sponsors</a></li>
+      </ul>
     </nav>
   </div>
 </header>
@@ -63,9 +76,7 @@
       </a>
     </div>
 
-    <!-- OpenSports embed -->
-    <a class="os-iframe-link"
-       href="https://embed.opensports.net/iframe/events?aliasID=moreton-city-pickleball&customizations=%7B%22accentColor%22%3A%22%2367a468%22%2C%22customDomain%22%3A%22https%3A%2F%2Fopensports.net%2F%22%2C%22target%22%3A%22_blank%22%2C%22typeIDs%22%3A%5B2%2C1%2C3%5D%7D"></a>
+    <a class="os-iframe-link" href="https://embed.opensports.net/iframe/events?aliasID=moreton-city-pickleball&customizations=%7B%22accentColor%22%3A%22%2367a468%22%2C%22customDomain%22%3A%22https%3A%2F%2Fopensports.net%2F%22%2C%22target%22%3A%22_blank%22%2C%22typeIDs%22%3A%5B2%2C1%2C3%5D%7D"></a>
     <script src="https://embed.opensports.net/dist/iframe.min.js"></script>
   </div>
 </section>
@@ -76,253 +87,3 @@
 
   <div class="gallery-container">
     <div class="gallery">
-      <img src="assets/img/img.webp" alt="Pickleball gallery image 1">
-      <img src="assets/img/img2.webp" alt="Pickleball gallery image 2">
-      <img src="assets/img/img3.webp" alt="Pickleball gallery image 3">
-      <img src="assets/img/img4.webp" alt="Pickleball gallery image 4">
-      <img src="assets/img/img5.webp" alt="Pickleball gallery image 5">
-      <img src="assets/img/img6.webp" alt="Pickleball gallery image 6">
-      <img src="assets/img/img7.webp" alt="Pickleball gallery image 7">
-      <img src="assets/img/img8.webp" alt="Pickleball gallery image 8">
-    </div>
-  </div>
-</section>
-
-<!-- FACEBOOK -->
-<section id="facebook" class="section section-white">
-  <h2>Let’s be Friends</h2>
-
-  <div class="facebook-wrap">
-    <iframe
-      src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fmoretoncitypickleball&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
-      width="500"
-      height="500"
-      style="border:none;overflow:hidden"
-      scrolling="no"
-      frameborder="0"
-      allowfullscreen="true"
-      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-    </iframe>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="section section-blue">
-  <h2>About Moreton City Pickleball</h2>
-
-  <p class="about-text">
-    <strong>Our Mission.</strong>
-  </p>
-  <p class="about-text">
-    At Moreton City Pickleball, we’re more than just a club—we’re a vibrant community driven by friendship and a shared love for the game.
-    Whether you're a seasoned player or holding a paddle for the first time, you'll find a place on our court and encouragement from the sidelines.
-    Our mission is simple: to grow the sport of pickleball in a fun and supportive environment.
-  </p>
-  <p class="about-text">
-    Perfect for all ages, Pickleball is one of the fastest-growing sports in the world—a dynamic blend of tennis, badminton, and ping pong played on a smaller court.
-    It's easy to learn, endlessly social, and addictive in all the right ways.
-  </p>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="section section-white">
-  <h2>Contact Us</h2>
-
-  <div class="contact-grid">
-    <!-- LEFT: Form + success swap -->
-    <div class="contact-left">
-
-      <form id="contact-form" class="contact-form" action="https://formspree.io/f/meevrzgo" method="POST" novalidate>
-        <!-- Honeypot -->
-        <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-
-        <!-- Order is correct: Name → Email → Message -->
-        <label>
-          Name
-          <input type="text" name="name" required>
-        </label>
-
-        <label>
-          Email
-          <input type="email" name="email" required>
-        </label>
-
-        <label>
-          Message
-          <textarea name="message" rows="5" required></textarea>
-        </label>
-
-        <button id="send-btn" type="submit" class="btn primary">Send Message</button>
-
-        <p id="form-error" class="form-error" role="alert" hidden>
-          Sorry — something went wrong. Please try again.
-        </p>
-      </form>
-
-      <!-- Success replaces form -->
-      <div id="form-success" class="form-success-block" role="status" aria-live="polite" hidden>
-        <h3>Message Sent. Thank you.</h3>
-        <p>We’ll get back to you as soon as we can.</p>
-        <button type="button" id="send-another" class="btn outline">Send another message</button>
-      </div>
-
-    </div>
-
-    <!-- RIGHT: Info + Map -->
-    <div class="contact-info">
-      <p class="contact-highlight"><strong>Better yet, come and join in!</strong></p>
-
-      <a class="btn outline" href="https://opensports.net/moreton-city-pickleball" target="_blank" rel="noopener">
-        Join a session on OpenSports
-      </a>
-
-      <p class="address">
-        📍 474 Deception Bay Road<br>
-        Deception Bay, QLD 4508
-      </p>
-
-      <div class="map-wrap">
-        <iframe
-          src="https://www.google.com/maps?q=474%20Deception%20Bay%20Road,%20Deception%20Bay%20QLD%204508&output=embed"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- REGISTRATION -->
-<section id="registration" class="section section-blue">
-  <h2>Register to become a Member of Pickleball Queensland</h2>
-
-  <div class="registration-content">
-    <p class="registration-intro">
-      Start/renew your membership for discounted sessions and more.
-    </p>
-
-    <div class="registration-links">
-      <a class="btn primary" href="https://www.revolutionise.com.au/moretoncityp/rego/start/?membership=328044" target="_blank" rel="noopener">
-        General (Age between 18 and 64)
-      </a>
-      <a class="btn primary" href="https://www.revolutionise.com.au/moretoncityp/rego/start/?membership=328046" target="_blank" rel="noopener">
-        Junior (Age 17 or lower)
-      </a>
-      <a class="btn primary" href="https://www.revolutionise.com.au/moretoncityp/rego/start/?membership=328045" target="_blank" rel="noopener">
-        Senior (Age 65 or higher)
-      </a>
-      <a class="btn primary" href="https://www.pickleballaus.org/member-discounts" target="_blank" rel="noopener">
-        See More Member Benefits
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- SPONSORS -->
-<section id="sponsors" class="section section-white">
-  <h2>Proudly Partnered With</h2>
-
-  <div class="sponsors-wrap">
-    <a class="sponsor-card" href="https://www.facebook.com/profile.php?id=61561879484460#" target="_blank" rel="noopener">
-      <div class="sponsor-logo">
-        <img src="assets/img/muston_building_services.jpg" alt="Muston Building Services logo">
-      </div>
-      <span class="sponsor-name">Muston Building Services</span>
-    </a>
-
-    <a class="sponsor-card" href="https://www.pickleballqueensland.org/" target="_blank" rel="noopener">
-      <div class="sponsor-logo">
-        <img src="assets/img/PQA_logo.jpg" alt="Pickleball Association QLD logo">
-      </div>
-      <span class="sponsor-name">Pickleball Association QLD</span>
-    </a>
-
-    <a class="sponsor-card" href="https://www.signportal.com.au/" target="_blank" rel="noopener">
-      <div class="sponsor-logo">
-        <img src="assets/img/SignPortal_Logo.png" alt="SignPortal logo">
-      </div>
-      <span class="sponsor-name">SignPortal</span>
-    </a>
-  </div>
-</section>
-
-<!-- JS: header shrink + Formspree AJAX success swap -->
-<script>
-  // Header logo shrink on scroll (optional; harmless even if not styled)
-  const header = document.querySelector('.header');
-  window.addEventListener('scroll', () => {
-    header.classList.toggle('scrolled', window.scrollY > 50);
-  });
-
-  // Contact form AJAX: hide form on success, show success block
-  (function () {
-    const form = document.getElementById('contact-form');
-    const sendBtn = document.getElementById('send-btn');
-    const successBlock = document.getElementById('form-success');
-    const errorEl = document.getElementById('form-error');
-    const sendAnother = document.getElementById('send-another');
-
-    if (!form) return;
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      errorEl.hidden = true;
-
-      // Native validation
-      if (!form.checkValidity()) {
-        errorEl.textContent = "Please complete all required fields.";
-        errorEl.hidden = false;
-        return;
-      }
-
-      const data = new FormData(form);
-
-      // Honeypot
-      if (data.get('_gotcha')) {
-        form.reset();
-        form.hidden = true;
-        successBlock.hidden = false;
-        return;
-      }
-
-      sendBtn.disabled = true;
-      sendBtn.textContent = "Sending...";
-
-      try {
-        const res = await fetch(form.action, {
-          method: "POST",
-          body: data,
-          headers: { "Accept": "application/json" }
-        });
-
-        if (res.ok) {
-          form.reset();
-          form.hidden = true;
-          successBlock.hidden = false;
-        } else {
-          errorEl.hidden = false;
-        }
-      } catch (err) {
-        errorEl.hidden = false;
-      } finally {
-        sendBtn.disabled = false;
-        sendBtn.textContent = "Send Message";
-      }
-    });
-
-    if (sendAnother) {
-      sendAnother.addEventListener('click', () => {
-        successBlock.hidden = true;
-        form.hidden = false;
-        errorEl.hidden = true;
-        const firstInput = form.querySelector('input[name="name"]');
-        if (firstInput) firstInput.focus();
-      });
-    }
-  })();
-</script>
-
-</body>
-</html>
