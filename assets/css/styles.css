@@ -2,15 +2,19 @@
   --blue: #142A59;
 }
 
-/* Global */
 * { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth; /* optional but nice */
+}
 
 body {
   margin: 0;
   font-family: 'League Spartan', sans-serif;
+  line-height: 1.5;
 }
 
-/* Header */
+/* HEADER */
 .header {
   background: white;
   position: sticky;
@@ -21,24 +25,33 @@ body {
 .header-inner {
   max-width: 1200px;
   margin: auto;
-  padding: 1.2rem;
+  padding: 1.1rem 1rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
 .logo-wrap img {
   height: 90px;
+  transition: height 0.25s ease;
+}
+
+.header.scrolled .logo-wrap img {
+  height: 55px;
 }
 
 .nav a {
-  margin-left: 1.2rem;
+  margin-left: 1.1rem;
   color: var(--blue);
   text-decoration: none;
   font-weight: 600;
 }
 
-/* Sections */
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* SECTIONS */
 .section {
   padding: 2.5rem 1.25rem;
 }
@@ -47,21 +60,16 @@ body {
   text-align: center;
   font-size: 2.2rem;
   font-weight: 700;
+  margin: 0 0 1.2rem 0;
 }
 
-.section-white {
-  background: white;
-  color: var(--blue);
-}
+.section-white { background: white; color: var(--blue); }
+.section-blue { background: var(--blue); color: white; }
 
-.section-blue {
-  background: var(--blue);
-  color: white;
-}
-
-/* Hero */
+/* HERO */
 .hero {
   position: relative;
+  /* IMPORTANT: CSS file is assets/css/, image is assets/img/ -> ../img/ */
   background: url("../img/pickleball_generic.jpg") center / cover no-repeat;
   color: white;
   padding: 5rem 1.25rem;
@@ -77,25 +85,32 @@ body {
   position: relative;
   max-width: 900px;
   margin: auto;
+  text-align: left;
 }
 
 .hero-byline {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: 0 0 0.75rem 0;
 }
 
 .hero h1 {
   font-size: 3.2rem;
+  font-weight: 700;
+  margin: 0 0 1.2rem 0;
 }
 
-/* Buttons */
+/* BUTTONS */
 .btn {
   display: inline-flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   padding: 0.8rem 1.6rem;
   border-radius: 6px;
   font-weight: 700;
   text-decoration: none;
+  border: none;
+  cursor: pointer;
 }
 
 .section-white .btn.primary {
@@ -109,28 +124,35 @@ body {
 }
 
 .btn.outline {
-  border: 2px solid currentColor;
   background: transparent;
+  border: 2px solid currentColor;
   color: currentColor;
 }
 
-/* Sessions */
+/* SESSIONS */
 .sessions-container {
   max-width: 1100px;
   margin: auto;
   max-height: 700px;
   overflow-y: auto;
+  padding: 0.5rem;
 }
 
 .os-buttons {
-  text-align: center;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: 1rem;
 }
 
-/* Gallery */
+/* GALLERY */
 .gallery-container {
+  max-width: 1200px;
+  margin: auto;
   max-height: 600px;
   overflow-y: auto;
+  padding: 0.25rem;
 }
 
 .gallery {
@@ -146,50 +168,134 @@ body {
   border-radius: 8px;
 }
 
-/* Facebook */
+/* FACEBOOK */
 .facebook-wrap {
   display: flex;
   justify-content: center;
 }
 
-/* Contact */
+/* ABOUT */
+.about-text {
+  max-width: 900px;
+  margin: auto;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* CONTACT */
 .contact-grid {
   max-width: 1100px;
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
+  align-items: start;
 }
 
 .contact-form label {
   display: flex;
   flex-direction: column;
+  font-weight: 600;
   margin-bottom: 1rem;
 }
 
 .contact-form input,
 .contact-form textarea {
   margin-top: 0.4rem;
-  padding: 0.6rem;
+  padding: 0.65rem;
+  font-family: inherit;
+  font-size: 1rem;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
 }
 
-/* Registration */
+.contact-form textarea {
+  resize: vertical;
+}
+
+.form-error {
+  margin-top: 1rem;
+  color: #b00020;
+  font-weight: 600;
+}
+
+.hp { display: none; }
+
+.form-success-block {
+  border: 2px solid rgba(20, 42, 89, 0.18);
+  border-radius: 12px;
+  padding: 1.25rem;
+  background: rgba(20, 42, 89, 0.05);
+}
+
+.form-success-block h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.6rem;
+  color: var(--blue);
+}
+
+.form-success-block p {
+  margin: 0 0 1rem 0;
+  color: #1f2f57;
+}
+
+.contact-highlight {
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+
+.address {
+  margin-top: 1rem;
+  font-size: 1.05rem;
+}
+
+.map-wrap iframe {
+  width: 100%;
+  height: 260px;
+  border: 0;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+/* REGISTRATION */
 .registration-content {
   max-width: 800px;
   margin: auto;
   text-align: center;
 }
 
+.registration-intro {
+  font-size: 1.15rem;
+  margin-bottom: 1.5rem;
+}
+
 .registration-links {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.8rem;
+  gap: 0.9rem;
 }
 
-/* Mobile */
+.registration-links .btn {
+  width: 100%;
+  max-width: 460px;
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .logo-wrap img {
+    height: 70px;
+  }
+
+  .header.scrolled .logo-wrap img {
+    height: 50px;
   }
 }
