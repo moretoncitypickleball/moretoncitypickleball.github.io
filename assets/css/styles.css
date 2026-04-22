@@ -5,7 +5,7 @@
 * { box-sizing: border-box; }
 
 html {
-  scroll-behavior: smooth; /* optional but nice */
+  scroll-behavior: smooth;
 }
 
 body {
@@ -64,12 +64,12 @@ body {
 }
 
 .section-white { background: white; color: var(--blue); }
-.section-blue { background: var(--blue); color: white; }
+.section-blue  { background: var(--blue); color: white; }
 
 /* HERO */
 .hero {
   position: relative;
-  /* IMPORTANT: CSS file is assets/css/, image is assets/img/ -> ../img/ */
+  /* correct path: CSS is assets/css/, image is assets/img/ */
   background: url("../img/pickleball_generic.jpg") center / cover no-repeat;
   color: white;
   padding: 5rem 1.25rem;
@@ -100,7 +100,7 @@ body {
   margin: 0 0 1.2rem 0;
 }
 
-/* BUTTONS */
+/* BUTTONS (fixed so Hero always styles correctly) */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -113,12 +113,15 @@ body {
   cursor: pointer;
 }
 
-.section-white .btn.primary {
+/* Default primary button (works anywhere) */
+.btn.primary {
   background: var(--blue);
   color: white;
 }
 
-.section-blue .btn.primary {
+/* Primary button on dark sections + hero */
+.section-blue .btn.primary,
+.hero .btn.primary {
   background: white;
   color: var(--blue);
 }
@@ -174,7 +177,26 @@ body {
   justify-content: center;
 }
 
-/* ABOUT */
+/* ABOUT (adds PickleballsBackground.png as section background) */
+#about {
+  position: relative;
+  background: url("../img/PickleballsBackground.png") center / cover no-repeat;
+  color: white;
+}
+
+/* overlay to keep text readable */
+#about::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 42, 89, 0.78);
+}
+
+/* ensure about content sits above overlay */
+#about > * {
+  position: relative;
+}
+
 .about-text {
   max-width: 900px;
   margin: auto;
@@ -299,63 +321,3 @@ body {
     height: 50px;
   }
 }
-
-/* SPONSORS */
-.sponsors-wrap {
-  max-width: 1100px;
-  margin: 1.5rem auto 0;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.25rem;
-  align-items: stretch;
-}
-
-.sponsor-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  background: #fff;
-  border: 2px solid rgba(20, 42, 89, 0.15);
-  border-radius: 12px;
-  padding: 1.25rem;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.sponsor-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 22px rgba(20, 42, 89, 0.12);
-}
-
-/* This frame forces all logos to the same visual height */
-.sponsor-logo {
-  height: 110px;              /* <-- adjust this to taste */
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.sponsor-logo img {
-  max-height: 100%;           /* fills the frame height */
-  max-width: 100%;
-  object-fit: contain;        /* keep aspect ratio, no crop */
-}
-
-.sponsor-name {
-  margin-top: 0.85rem;
-  font-weight: 700;
-  color: var(--blue);
-  text-align: center;
-}
-
-/* Mobile */
-@media (max-width: 900px) {
-  .sponsors-wrap {
-    grid-template-columns: 1fr;
-  }
-  .sponsor-logo {
-    height: 100px;
-  }
-}
-
