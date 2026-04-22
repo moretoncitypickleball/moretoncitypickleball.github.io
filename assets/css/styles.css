@@ -1,6 +1,6 @@
 :root{
   --blue:#142A59;
-  --nav-offset:50px; /* offset for sticky header when jumping to anchors */
+  --nav-offset:60px; /* offset for sticky header when jumping to anchors */
 }
 
 *{ box-sizing:border-box; }
