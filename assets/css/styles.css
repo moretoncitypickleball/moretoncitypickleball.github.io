@@ -9,7 +9,7 @@ html {
 }
 
 /* Anchor offset so nav links land at the TOP of sections (not under sticky header) */
-:root { --nav-offset: 110px; } /* tweak if needed */
+:root { --nav-offset: 60px; } /* tweak if needed */
 
 html {
   scroll-padding-top: var(--nav-offset);
