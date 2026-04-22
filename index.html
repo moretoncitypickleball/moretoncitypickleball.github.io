@@ -5,20 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Moreton City Pickleball</title>
 
+  <!-- League Spartan font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700&display=swap" rel="stylesheet">
 
+  <!-- Site styles -->
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header class="header">
   <div class="header-inner">
     <div class="logo-wrap">
       <img src="assets/img/MCP_logo.JPG" alt="Moreton City Pickleball logo">
     </div>
+
     <nav class="nav">
       <a href="#home">Home</a>
       <a href="#sessions">Sessions</a>
@@ -31,17 +35,22 @@
   </div>
 </header>
 
+<!-- HERO -->
 <section id="home" class="section hero">
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <p class="hero-byline">We are about community, fun and growing the sport of Pickleball.</p>
+    <p class="hero-byline">
+      We are about community, fun and growing the sport of Pickleball.
+    </p>
     <h1>Welcome to Our Pickleball Community</h1>
+
     <a class="btn primary" href="https://opensports.net/moreton-city-pickleball" target="_blank">
       Join a session
     </a>
   </div>
 </section>
 
+<!-- SESSIONS -->
 <section id="sessions" class="section section-white">
   <h2>Join us at an upcoming session with OpenSports</h2>
 
@@ -56,11 +65,13 @@
     </div>
 
     <a class="os-iframe-link"
-       href="https://embed.opensports.net/iframe/events?aliasID=moreton-city-pickleball"></a>
+       href="https://embed.opensports.net/iframe/events?aliasID=moreton-city-pickleball">
+    </a>
     <script src="https://embed.opensports.net/dist/iframe.min.js"></script>
   </div>
 </section>
 
+<!-- GALLERY -->
 <section id="gallery" class="section section-blue">
   <h2>Capture the spirit of pickleball with us!</h2>
 
@@ -78,56 +89,71 @@
   </div>
 </section>
 
+<!-- FACEBOOK -->
 <section id="facebook" class="section section-white">
   <h2>Let’s be Friends</h2>
   <div class="facebook-wrap">
-    <iframe src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/moretoncitypickleball&tabs=timeline&width=500&height=500&adapt_container_width=true"
-      width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0"></iframe>
+    <iframe
+      src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/moretoncitypickleball&tabs=timeline&width=500&height=500&adapt_container_width=true"
+      width="500"
+      height="500"
+      style="border:none;overflow:hidden"
+      scrolling="no"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
   </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about" class="section section-blue">
   <h2>About Moreton City Pickleball</h2>
+
   <p class="about-text">
     <strong>Our Mission.</strong>
     At Moreton City Pickleball, we’re more than just a club—we’re a vibrant community driven by friendship and a shared love for the game.
+    Whether you're a seasoned player or holding a paddle for the first time, you'll find a place on our court and encouragement from the sidelines.
+    Our mission is simple: to grow the sport of pickleball in a fun and supportive environment.
+    Perfect for all ages, Pickleball is one of the fastest-growing sports in the world—a dynamic blend of tennis, badminton, and ping pong played on a smaller court.
+    It's easy to learn, endlessly social, and addictive in all the right ways.
   </p>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="section section-white">
   <h2>Contact Us</h2>
 
   <div class="contact-grid">
-    <div class="contact-left">
-      <form id="contact-form" class="contact-form"
-            action="https://formspree.io/f/meevrzgo" method="POST">
+    <form
+      id="contact-form"
+      class="contact-form"
+      action="https://formspree.io/f/meevrzgo"
+      method="POST"
+    >
+      <input type="text" name="_gotcha" class="hp">
 
-        <input type="text" name="_gotcha" class="hp">
+      <label>
+        Name
+        <input type="text" name="name" required>
+      </label>
 
-        <label>Name
-          <input type="text" name="name" required>
-        </label>
+      <label>
+        Email
+        <input type="email" name="email" required>
+      </label>
 
-        <label>Email
-          <input type="email" name="email" required>
-        </label>
+      <label>
+        Message
+        <textarea name="message" rows="5" required></textarea>
+      </label>
 
-        <label>Message
-          <textarea name="message" rows="5" required></textarea>
-        </label>
-
-        <button class="btn primary" type="submit">Send Message</button>
-      </form>
-
-      <div id="form-success" class="form-success-block" hidden>
-        <h3>Message Sent. Thank you.</h3>
-        <p>We’ll get back to you shortly.</p>
-      </div>
-    </div>
+      <button type="submit" class="btn primary">Send Message</button>
+    </form>
 
     <div class="contact-info">
       <p><strong>Better yet, come and join in!</strong></p>
-      <a class="btn primary" href="https://opensports.net/moreton-city-pickleball" target="_blank">
+
+      <a class="btn outline" href="https://opensports.net/moreton-city-pickleball">
         Join a session
       </a>
 
@@ -137,12 +163,13 @@
       </p>
 
       <iframe
-        src="https://www.google.com/maps?q=474%20Deception%20Bay%20Road%20QLD&output=embed">
+        src="https://www.google.com/maps?q=474%20Deception%20Bay%20Road,%20QLD&output=embed">
       </iframe>
     </div>
   </div>
 </section>
 
+<!-- REGISTRATION -->
 <section id="registration" class="section section-blue">
   <h2>Register to become a Member of Pickleball Queensland</h2>
 
@@ -155,25 +182,21 @@
       <a class="btn outline" href="https://www.revolutionise.com.au/moretoncityp/rego/start/?membership=328044">
         General (Age 18–64)
       </a>
+
       <a class="btn outline" href="https://www.revolutionise.com.au/moretoncityp/rego/start/?membership=328046">
         Junior (17 or under)
       </a>
+
       <a class="btn outline" href="https://www.revolutionise.com.au/moretoncityp/rego/start/?membership=328045">
         Senior (65+)
       </a>
+
       <a class="btn outline" href="https://www.pickleballaus.org/member-discounts">
         See More Member Benefits
       </a>
     </div>
   </div>
 </section>
-
-<script>
-  const header = document.querySelector('.header');
-  window.addEventListener('scroll', () => {
-    header.classList.toggle('scrolled', window.scrollY > 50);
-  });
-</script>
 
 </body>
 </html>
