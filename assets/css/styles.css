@@ -314,9 +314,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-decoration: none;
-  background: #ffffff;
+  background: #fff;
   border: 2px solid rgba(20, 42, 89, 0.15);
   border-radius: 12px;
   padding: 1.25rem;
@@ -328,15 +327,23 @@ body {
   box-shadow: 0 10px 22px rgba(20, 42, 89, 0.12);
 }
 
-.sponsor-card img {
+/* This frame forces all logos to the same visual height */
+.sponsor-logo {
+  height: 110px;              /* <-- adjust this to taste */
   width: 100%;
-  max-width: 280px;
-  height: 110px;
-  object-fit: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sponsor-logo img {
+  max-height: 100%;           /* fills the frame height */
+  max-width: 100%;
+  object-fit: contain;        /* keep aspect ratio, no crop */
 }
 
 .sponsor-name {
-  margin-top: 0.8rem;
+  margin-top: 0.85rem;
   font-weight: 700;
   color: var(--blue);
   text-align: center;
@@ -347,8 +354,8 @@ body {
   .sponsors-wrap {
     grid-template-columns: 1fr;
   }
-  .sponsor-card img {
+  .sponsor-logo {
     height: 100px;
-    max-width: 320px;
   }
 }
+
