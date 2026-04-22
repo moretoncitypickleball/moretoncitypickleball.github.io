@@ -8,6 +8,19 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Anchor offset so nav links land at the TOP of sections (not under sticky header) */
+:root { --nav-offset: 110px; } /* tweak if needed */
+
+html {
+  scroll-padding-top: var(--nav-offset);
+}
+
+/* Ensure any element you jump to (sections) stops below the header */
+section[id] {
+  scroll-margin-top: var(--nav-offset);
+}
+``
+
 body {
   margin: 0;
   font-family: 'League Spartan', sans-serif;
