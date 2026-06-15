@@ -353,6 +353,19 @@ body{
   margin-top:1rem;
 }
 
+.court-hire-note {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+.court-hire-note a {
+  color: #0C2956;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
 /* REGISTRATION */
 .registration-content{
   max-width:800px;
