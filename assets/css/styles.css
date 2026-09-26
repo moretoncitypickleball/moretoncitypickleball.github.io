@@ -199,6 +199,16 @@ body{
   margin: 0 auto;
 }
 
+.event-facebook-link {
+  margin-top: 1rem;
+}
+
+.event-facebook-link a {
+  color: #0C2956;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
 
 
 .special-event-hero {
