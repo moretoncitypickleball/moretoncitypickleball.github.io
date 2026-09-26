@@ -150,6 +150,57 @@ body{
 
 
 /* SPECIAL EVENT HERO */
+
+
+/* Centre all text inside the hero */
+.special-event-hero,
+.event-hero-content,
+.event-title,
+.event-description {
+  text-align: center;
+}
+
+/* Reduce top/bottom spacing of the hero section */
+.special-event-hero {
+  background: #fff;
+  padding: 2rem 0 2.5rem 0;   /* tighter spacing */
+}
+
+/* Wider container but still centred */
+.event-hero-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Title styling */
+.event-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0C2956;
+  margin-bottom: 1rem;
+}
+
+/* Banner image: centred + responsive */
+.event-banner {
+  display: block;
+  width: 100%;           /* always fits page width */
+  max-width: 1000px;     /* prevents it from becoming too huge */
+  height: auto;
+  margin: 0 auto 1.2rem auto;
+  border-radius: 8px;
+}
+
+/* Description text */
+.event-description {
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: #333;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+
+
 .special-event-hero {
   background: #fff;
   padding: 3rem 1rem;
